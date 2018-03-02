@@ -76,7 +76,8 @@
             data: JSON.stringify(params),
             success: function (response) {
                 if (response.status == 200) {
-                    $("#warningLogin").text("Success");
+                    var url = response.data;
+                    window.location.replace(url);
                 } else {
                     $("#warningLogin").text("Invalid username or password");
                 }
